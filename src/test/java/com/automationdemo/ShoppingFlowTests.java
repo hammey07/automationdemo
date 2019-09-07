@@ -22,7 +22,7 @@ public class ShoppingFlowTests {
     private static String totalPrice;
 
     @Test
-    public void test1() {
+    public void test01TitleTest() {
         driver = DriverManager.setup(driver);
         HomePage homePage = new HomePage(driver);
 
@@ -34,7 +34,7 @@ public class ShoppingFlowTests {
     }
 
     @Test
-    public void test2() {
+    public void test02SearchProductListTitleTest() {
         SearchResultsPage searchPage = new SearchResultsPage(driver);
         System.out.println(" ------------------- Testing if Search Query String matches to title's of listed products ------------------- ");
         List<String> productNames = new ArrayList<String>();
@@ -47,7 +47,7 @@ public class ShoppingFlowTests {
     }
 
     @Test
-    public void test3() {
+    public void test03PriceTest() {
         ProductDetailPage detailPage = new ProductDetailPage(driver);
         ViewCartPage viewCartPage = new ViewCartPage(driver);
         SearchResultsPage searchPage = new SearchResultsPage(driver);
@@ -69,7 +69,7 @@ public class ShoppingFlowTests {
     }
 
     @Test
-    public void test4() throws InterruptedException {
+    public void test04UserDetailsVerificationTest() throws InterruptedException {
         AuthPage authPage = new AuthPage(driver);
         PersonalInfoFormPage personalInfoFormPage = new PersonalInfoFormPage(driver);
         SeleniumSupportMethods seleniumSupportMethods = new SeleniumSupportMethods();
@@ -104,7 +104,7 @@ public class ShoppingFlowTests {
     }
 
     @Test
-    public void test5() throws InterruptedException {
+    public void test05ProductTitleTest() throws InterruptedException {
         ShippingPage shippingPage = new ShippingPage(driver);
         PaymentPage paymentPage = new PaymentPage(driver);
         shippingPage.clickCheckboxTerms();
@@ -115,7 +115,7 @@ public class ShoppingFlowTests {
     }
 
     @Test
-    public void test6() throws InterruptedException {
+    public void test06FinalPriceTest() throws InterruptedException {
         BankWirePayPage bankWirePayPage = new BankWirePayPage(driver);
         PaymentPage paymentPage = new PaymentPage(driver);
         totalPrice = paymentPage.getTotalPrice();
