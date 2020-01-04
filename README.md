@@ -22,4 +22,3 @@ I decided to stick with one out of many testing scenarios. In my opinion, below 
 These features have been tested from initial product search to final checkout. I would invest my time adding the following features at a later stage.
 1-	Allow multi browser support.
 2-	Allow tests to run independently.
-
